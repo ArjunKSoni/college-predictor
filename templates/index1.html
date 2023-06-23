@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block style%}
+<style>
+  .content2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+{%endblock style%}
+{% block body%}
+  <!-- nav bar ended -->
+  <div class="content2">
+    <form action="/features" method="POST">
+      <div class="main">
+        <h2>Enter your rank: </h2>
+        <input type="text" id="fname" name="rank">
+      </div>
+      <br>
+      <div class="main">
+        <h2>Enter your name: </h2>
+        <input type="text" name="name"> <br>
+      </div>
+      <input type="submit" value="Submit" style="background-color: lightgreen; color: white;border-radius: 1rem;">
+    </form>
+  </div>
+{%endblock body%}
